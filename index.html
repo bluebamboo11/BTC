@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" sizes="192x192" href="favicon.ico">
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/angular-material.min.css">
+    <script src="../BTC/js/angular.min.js"></script>
+    <script src="../BTC/js/angular-aria.min.js"></script>
+    <script src="../BTC/js/angular-animate.min.js"></script>
+    <script src="js/angular-material.min.js"></script>
+    <script src="js/main.js?v=1"></script>
+</head>
+<body ng-app="MyApp" ng-controller="AppCtrl">
+<md-card class="container">
+    <form name="trade" class="form">
+        <md-input-container class="md-block">
+            <label>Nhập api key</label>
+            <input required name="apiKey" ng-model="apiKey">
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Nhập api secret</label>
+            <input required name="apiSecret" ng-model="apiSecret">
+        </md-input-container>
+        <div layout="column" class="main" layout-gt-sm="row">
+            <md-content flex-gt-sm="50" flex layout="row">
+                <md-list flex>
+                    <md-subheader class="md-no-sticky">Sell Orders</md-subheader>
+                    <md-list-item class="md-3-line" ng-click="null">
+                       {{lastPrice}}
+                    </md-list-item>
+
+                </md-list>
+            </md-content>
+            <md-content flex-gt-sm="50" flex layout="row">
+                <md-list flex>
+                    <md-subheader class="md-no-sticky">Buy Orders</md-subheader>
+                    <md-list-item class="md-3-line" ng-click="null">
+                       {{bidPrice}}
+                    </md-list-item>
+
+                </md-list>
+            </md-content>
+        </div>
+        <div class="sell" layout="row" layout-xs="column">
+            <md-input-container class="md-block" flex-gt-sm="70" flex>
+                <label>Nhập số tiền mua</label>
+                <input required name="apiSecret" ng-model="apiSecret">
+            </md-input-container>
+            <md-button  type="submit" class="md-raised md-primary" flex-gt-sm="30" flex>Mua</md-button>
+        </div>
+        <div class="buy"  layout="row" layout-xs="column">
+            <md-input-container class="md-block"flex-gt-sm="70" flex>
+                <label>Nhập số tiền bán</label>
+                <input required name="apiSecret" ng-model="apiSecret">
+            </md-input-container>
+            <md-button  type="submit" class="md-raised md-warn" flex-gt-sm="30" flex>Bán</md-button>
+        </div>
+    </form>
+</md-card>
+</body>
+</html>

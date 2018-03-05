@@ -1,0 +1,27 @@
+.container {
+    padding: 3%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    min-height: 600px;
+    height: 70%;
+    width: 45vh;
+    margin:8% auto;
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+html {
+    background-color:  rgb(147, 147, 147);
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(147, 147, 147);
+    position: relative;
+
+}
+.form{
+    margin-top: 5%;
+}
+.main{
+    width: 100%;
+    height: auto;
+}
